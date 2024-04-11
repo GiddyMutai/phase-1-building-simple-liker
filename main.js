@@ -11,7 +11,7 @@ const errorMessage = document.querySelector("#modal-message");
 
 errorModal.classList.add("hidden");
 
-function toggleLike(event) {
+function handleLike(event) {
   const heart = event.target;
   mimicServerCall()
     .then(() => {
@@ -34,7 +34,7 @@ function toggleLike(event) {
 
 // iterates through the heart buttons
 for (const button of likeButtons) {
-  button.addEventListener("click", toggleLike);
+  button.addEventListener("click", handleLike);
 }
 
 //------------------------------------------------------------------------------
